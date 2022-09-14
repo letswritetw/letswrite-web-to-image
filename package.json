@@ -1,0 +1,8 @@
+{
+  "name": "letswrite-web-to-image",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/letswritetw/letswrite-web-to-image.git",
+  "author": "Let's Write <letswritetw@gmail.com>",
+  "license": "MIT"
+}

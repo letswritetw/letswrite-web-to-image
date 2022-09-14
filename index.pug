@@ -1,0 +1,109 @@
+- var link = ''
+- var title = '網頁截圖功能'
+- var description = '網頁截圖功能'
+
+<!DOCTYPE html>
+html(lang="zh-Hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{title} - August - Let's Write
+
+    link(rel="canonical", href=`https://www.letswrite.tw/${link}/`)
+    meta(property="og:url", content=`https://letswritetw.github.io/letswrite-${link}/`)
+
+    meta(property="fb:app_id", content="911000986339138")
+    meta(property="og:type", content="website")
+
+    meta(property="og:site_name", content="Let's Write")
+    meta(property="og:title", content=`${title} - Augustus - Let's Write`)
+    meta(itemprop="name", content=`${title} - Augustus - Let's Write`)
+
+    meta(name="description", content=description)
+    meta(property="og:description", content=description)
+    meta(itemprop="description", content=description)
+
+    meta(itemprop="image", content=`https://letswritetw.github.io/letswrite-${link}/fb.png`)
+    meta(property="og:image", content=`https://letswritetw.github.io/letswrite-${link}/fb.png`)
+    meta(property="og:image:width", content="1200")
+    meta(property="og:image:height", content="630")
+    meta(property="og:image:alt", content=title)
+
+    link(rel="shortcut icon", href="https://letswritetw.github.io/letswritetw/dist/img/logo_512.png")
+
+    //- css
+    script(src="https://cdn.tailwindcss.com")
+    link(rel="stylesheet", href="dist/style.min.css", media="screen")
+    script.
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              main: '#42A6F7',
+              mainHover: '#167FFF'
+            }
+          }
+        }
+      }
+
+    // Google Tag Manager
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-PGQ9WQT');
+  body.bg-neutral-800.text-white
+
+    // Google Tag Manager (noscript)
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-PGQ9WQT", height="0", width="0", style="display:none;visibility:hidden")
+    
+    #app.container.mx-auto.p-8
+      .text-center
+        h1.mb-4.font-bold.text-4xl=title
+        //- p 筆記文：
+        //-   a(class="text-main hover:text-mainHover", href=`https://www.letswrite.tw/${link}/`) Let's Write
+      
+      hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
+
+      section#section1.mx-auto.p-4.max-w-3xl.bg-neutral-900.border.border-gray-200.rounded-xl
+        h3.mb-2.font-bold.text-xl Section 1
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, repellat voluptatem! Veritatis debitis voluptas perspiciatis expedita, numquam iure totam ratione quo officia sapiente quia similique dolorum, recusandae laudantium nostrum inventore.
+      
+      .mx-auto.my-4.p-4.max-w-3xl.text-center
+        a(id="capture1", class="px-6 py-2 leading-none bg-transparent border border-main rounded-xl text-lg text-main hover:bg-main hover:text-white transition-colors", href="") 截圖 Section 1
+      
+      hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
+
+      section#section2.mx-auto.p-4.max-w-3xl.bg-neutral-900.border.border-gray-200.rounded-xl
+        h3.mb-2.font-bold.text-xl Section 2
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, repellat voluptatem! Veritatis debitis voluptas perspiciatis expedita, numquam iure totam ratione quo officia sapiente quia similique dolorum, recusandae laudantium nostrum inventore.
+        .grid.grid-cols-3.gap-3.my-2
+          div
+            img.rounded-xl(src="dist/img1.jpeg", alt="假圖1")
+          div
+            img.rounded-xl(src="dist/img2.jpeg", alt="假圖2")
+          div
+            img.rounded-xl(src="dist/img3.jpeg", alt="假圖3")
+      
+      .mx-auto.my-4.p-4.max-w-3xl.text-center
+        a(id="capture2", class="px-6 py-2 leading-none bg-transparent border border-main rounded-xl text-lg text-main hover:bg-main hover:text-white transition-colors", href="") 截圖 Section 2
+      
+      hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
+
+      section#section3.absolute.p-8(class="-left-full z-[-1]")
+
+      .mx-auto.my-2.p-4.max-w-3xl.text-center
+        a(id="capture3", class="px-6 py-2 leading-none bg-transparent border border-mainHover rounded-xl text-lg text-mainHover hover:bg-mainHover hover:text-white transition-colors", href="") 截圖 Section 1 + 2
+      
+      hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
+
+      p.text-center 引用資源：
+        a(class="text-main hover:text-mainHover", href="https://html2canvas.hertzen.com/", rel="noopener noreferrer", target="_blank") html2canvas
+        | 、
+        a(class="text-main hover:text-mainHover", href="https://github.com/hongru/canvas2image", rel="noopener noreferrer", target="_blank") Canvas2image
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js")
+    script(src="dist/main.min.js")
