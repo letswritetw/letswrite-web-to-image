@@ -1,4 +1,4 @@
-- var link = ''
+- var link = 'web-to-image'
 - var title = '網頁截圖功能'
 - var description = '網頁截圖功能'
 
@@ -24,8 +24,8 @@ html(lang="zh-Hant")
     meta(property="og:description", content=description)
     meta(itemprop="description", content=description)
 
-    meta(itemprop="image", content=`https://letswritetw.github.io/letswrite-${link}/fb.png`)
-    meta(property="og:image", content=`https://letswritetw.github.io/letswrite-${link}/fb.png`)
+    meta(itemprop="image", content=`https://letswritetw.github.io/letswrite-${link}/fb.jpg`)
+    meta(property="og:image", content=`https://letswritetw.github.io/letswrite-${link}/fb.jpg`)
     meta(property="og:image:width", content="1200")
     meta(property="og:image:height", content="630")
     meta(property="og:image:alt", content=title)
@@ -63,11 +63,12 @@ html(lang="zh-Hant")
     #app.container.mx-auto.p-8
       .text-center
         h1.mb-4.font-bold.text-4xl=title
-        //- p 筆記文：
-        //-   a(class="text-main hover:text-mainHover", href=`https://www.letswrite.tw/${link}/`) Let's Write
+        p 筆記文：
+          a(class="text-main hover:text-mainHover", href=`https://www.letswrite.tw/${link}/`) Let's Write
       
       hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
 
+      // Section 1
       section#section1.mx-auto.p-4.max-w-3xl.bg-neutral-900.border.border-gray-200.rounded-xl
         h3.mb-2.font-bold.text-xl Section 1
         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, repellat voluptatem! Veritatis debitis voluptas perspiciatis expedita, numquam iure totam ratione quo officia sapiente quia similique dolorum, recusandae laudantium nostrum inventore.
@@ -77,6 +78,7 @@ html(lang="zh-Hant")
       
       hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
 
+      // Section 2
       section#section2.mx-auto.p-4.max-w-3xl.bg-neutral-900.border.border-gray-200.rounded-xl
         h3.mb-2.font-bold.text-xl Section 2
         p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, repellat voluptatem! Veritatis debitis voluptas perspiciatis expedita, numquam iure totam ratione quo officia sapiente quia similique dolorum, recusandae laudantium nostrum inventore.
@@ -93,6 +95,7 @@ html(lang="zh-Hant")
       
       hr.my-8.mx-auto.max-w-3xl.border-t.border-gray-500.border-dashed
 
+      // 隱藏的 Section 3
       section#section3.absolute.p-8(class="-left-full z-[-1]")
 
       .mx-auto.my-2.p-4.max-w-3xl.text-center

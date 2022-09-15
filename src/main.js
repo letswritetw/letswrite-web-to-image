@@ -10,13 +10,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // HTML to Canvas
   function htmlToCanvas(id) {
-    html2canvas(
-      document.getElementById(id), {
-        useCORS: true,
-        backgroundColor: '#262626'
-      }).then(canvas => {
+    const el = document.getElementById(id);
+    const config = {
+      useCORS: true,
+      backgroundColor: '#262626'
+    };
+    html2canvas(el, config).then(canvas => {
       canvasToImage(canvas);
-      if(id === 'section3') {
+      if (id === 'section3') {
         setTimeout(() => {
           document.getElementById('section3').innerHTML = '';
         }, 1000)

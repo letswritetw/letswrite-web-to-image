@@ -92,15 +92,15 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/fb.png" : {
-      "ft" : 32768,
-      "iS" : 357194,
+    "\/fb.jpg" : {
+      "ft" : 16384,
+      "iS" : 319679,
+      "jF" : 0,
       "oA" : 0,
-      "oAP" : "\/fb.png",
+      "oAP" : "\/fb.jpg",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
-      "oT" : 1,
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
